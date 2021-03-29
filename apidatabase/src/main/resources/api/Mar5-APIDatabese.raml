@@ -1,0 +1,27 @@
+#%RAML 1.0
+title: Mar4-vamsi
+/VAMSI:
+  description: This APIs is created to get the data from database
+  get:
+    queryParameters:
+      Firstname:
+        type: string
+        maxLength: 15
+        minLength: 3
+      Lastname:
+        type: string
+        maxLength: 10
+        minLength: 3
+      UserId:
+        type: integer
+        maximum: 5
+        minimum: 1
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "Message":"SUCCESS"
+              }
+          
